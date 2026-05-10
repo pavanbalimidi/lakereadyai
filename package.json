@@ -1,0 +1,15 @@
+{
+  "name": "ai-readiness-scanner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Enterprise AI Readiness Scanner for Databricks, Unity Catalog, and Snowflake.",
+  "scripts": {
+    "dev:web": "npm --prefix apps/web run dev",
+    "dev:api": "uvicorn app.main:app --reload --app-dir apps/api --host 0.0.0.0 --port 8000",
+    "dev:worker": "celery -A app.workers.celery_app worker --loglevel=info --workdir apps/api",
+    "build:web": "npm --prefix apps/web run build",
+    "lint:web": "npm --prefix apps/web run lint",
+    "compose:up": "docker compose -f infra/docker-compose.yml up --build",
+    "compose:down": "docker compose -f infra/docker-compose.yml down -v"
+  }
+}

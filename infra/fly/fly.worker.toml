@@ -1,0 +1,13 @@
+app = "aiready-worker"
+primary_region = "iad"
+
+[build]
+  dockerfile = "../../apps/api/Dockerfile"
+
+[processes]
+  worker = "celery -A app.workers.celery_app worker --loglevel=info"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 1024

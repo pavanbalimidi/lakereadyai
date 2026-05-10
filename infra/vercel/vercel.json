@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rootDirectory": "apps/web",
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "installCommand": "npm install --legacy-peer-deps",
+  "env": {
+    "NEXT_PUBLIC_API_URL": "@aiready_api_url",
+    "AUTH_SECRET": "@aiready_auth_secret"
+  }
+}

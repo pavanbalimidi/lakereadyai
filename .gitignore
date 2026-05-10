@@ -1,0 +1,52 @@
+# deps
+node_modules/
+.pnpm-store/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# build
+.next/
+dist/
+build/
+out/
+
+# env (real values stay local)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+logs/
+
+# coverage
+coverage/
+.coverage
+htmlcov/
+
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!*.example.tfvars
+
+# misc
+.cache/
+.turbo/
+.claude.json.bak

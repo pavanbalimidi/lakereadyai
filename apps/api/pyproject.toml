@@ -1,0 +1,45 @@
+[project]
+name = "aiready-api"
+version = "0.1.0"
+description = "AI Readiness Scanner backend (FastAPI)."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.6",
+  "pydantic>=2.9.2",
+  "pydantic-settings>=2.5.2",
+  "sqlalchemy>=2.0.35",
+  "alembic>=1.13.3",
+  "psycopg[binary]>=3.2.3",
+  "redis>=5.1.1",
+  "celery>=5.4.0",
+  "httpx>=0.27.2",
+  "anthropic>=0.39.0",
+  "databricks-sdk>=0.34.0",
+  "databricks-sql-connector>=3.4.0",
+  "snowflake-connector-python>=3.12.3",
+  "python-jose[cryptography]>=3.3.0",
+  "passlib[bcrypt]>=1.7.4",
+  "structlog>=24.4.0",
+  "tenacity>=9.0.0",
+  "orjson>=3.10.7",
+  "python-multipart>=0.0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.3",
+  "pytest-asyncio>=0.24.0",
+  "ruff>=0.6.9",
+  "mypy>=1.11.2",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
